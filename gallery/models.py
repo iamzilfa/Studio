@@ -12,6 +12,7 @@ class Category(models.Model):
 
     def delete_category(self):
         self.delete()
+        
 
 
 class Location(models.Model):
