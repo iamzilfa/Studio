@@ -1,0 +1,9 @@
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 60px;
+    font-family: 'Faster One', cursive;
+    margin-top:-0.20cm;
+}

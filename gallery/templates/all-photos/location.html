@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+
+<div class="container-fluid">
+
+    {% if location_images %}
+    <div class="card-columns">
+
+        {% for image in location_images %}
+
+        <div class="card" data-toggle="modal" data-target="#{{image.id}}">
+            <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img">
+        </div>
+        <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+                <div class="modal-content modalcard">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="font-weight: bold;font-family: 'Times New Roman', Times, serif;">
+                            {{image.name | upper}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid"> <br> <br>
+                        <ul><span class="blockquote-footer"
+                                style="color: black;font-size: 15px;">{{image.description}}</span></ul>
+                        <span style="margin-left: 300px;font-weight: bold;"><small><i class="fas fa-bars"></i>
+                                {{image.category}}</small></span> &nbsp;
+                        <span><small><i class="fas fa-map-marker-alt" style="font-weight: bold;"></i>
+                                {{image.location}}</small><span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
