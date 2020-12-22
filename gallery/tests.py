@@ -71,6 +71,7 @@ class TestLocation(TestCase):
         self.location.save_location()
         locations = Location.get_locations()
         self.assertTrue(len(locations) > 0)
+        
 
     def test_update_location(self):
         new_location = 'kigali'
