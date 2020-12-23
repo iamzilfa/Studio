@@ -14,7 +14,7 @@
         </div>
         <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
-            
+
             <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                 <div class="modal-content modalcard">
                     <div class="modal-header">
@@ -26,12 +26,20 @@
                     </div>
                     <div class="modal-body">
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid"> <br> <br>
-                        <ul><span class="blockquote-footer"
-                                style="color: black;font-size: 15px;">{{image.description}}</span></ul>
+                        <ul><span class="blockquote-footer" style="font-size: 15px;">{{image.description}}</span></ul>
                         <span style="margin-left: 300px;font-weight: bold;"><small><i class="fas fa-bars"></i>
-                                {{image.category}}</small></span> &nbsp;
+                                <span style="font-weight: bold;">{{image.category}}</span></small></span> &nbsp;
                         <span><small><i class="fas fa-map-marker-alt" style="font-weight: bold;"></i>
-                                {{image.location}}</small><span>
+                                <span style="font-weight: bold;">{{image.location}}</span> </small><span>
+                                    
+
+                                <div class="modal-footer">
+                                    <input class="form-control" type="text" value={{image.image.url}}
+                                        id="{{image.id}}.url"
+                                        style="height: 10%;font-family: 'Times New Roman', Times, serif;">
+                                    <button class="btn btn-sm my-2 my-sm-0" onclick="copyLink('{{image.id}}.url')"
+                                        style="background-color: purple;color: white;margin-left: -0.15cm;">Copy</button>
+                                </div>
                     </div>
                 </div>
             </div>
