@@ -8,3 +8,21 @@
     font-family: 'Faster One', cursive;
     margin-top:-0.20cm;
 }
+
+.modal-title{
+    color: purple;
+}
+
+.fa-bars{
+    color: rgb(30, 115, 243);
+    font-weight: bold;
+}
+
+.fa-map-marker-alt{
+    color: green;
+}
+
+.close{
+    color: black;
+    font-size: 30px;
+}
