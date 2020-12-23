@@ -1,6 +1,6 @@
 # Studio
 
-## Description
+
   A personal gallery application that allows a user to display photos for others to see.
 
 
