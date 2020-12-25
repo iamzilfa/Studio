@@ -34,18 +34,16 @@
                     <div class="modal-body">
                         <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid"> <br> <br>
                         <ul><span class="blockquote-footer" style="font-size: 15px;">{{image.description}}</span></ul>
-                        <span style="margin-left: 300px;font-weight: bold;"><small><i class="fas fa-bars"></i>
-                                <span style="font-weight: bold;">{{image.category}}</span></small></span> &nbsp;
+                        <hr>
+
+                        <span style="font-weight: bold;"><small><i class="fas fa-bars"></i>
+                                <span style="font-weight: bold;">{{image.category}}</small></span> &nbsp;
                         <span><small><i class="fas fa-map-marker-alt" style="font-weight: bold;"></i>
                                 <span style="font-weight: bold;">{{image.location}}</span> </small><span>
-
-                                <div class="modal-footer">
-                                    <input class="form-control" type="text" value={{image.image.url}}
-                                        id="{{image.id}}.url"
-                                        style="height: 10%;font-family: 'Times New Roman', Times, serif;">
-                                    <button class="btn btn-sm my-2 my-sm-0" onclick="copyLink('{{image.id}}.url')"
-                                        style="background-color: purple;color: white;margin-left: -0.15cm;">Copy</button>
-                                </div>
+                                <span><small><button class="btn btn-sm"
+                                        style="margin-left: 200px;color:purple;background-color:transparent;font-weight: bold; font-family: 'Times New Roman', Times, serif;"
+                                        onclick="copyLink('{{image.id}}.url')"><i class="fas fa-link"></i> Copy
+                                        URL</button></small></span>
                     </div>
                 </div>
             </div>
